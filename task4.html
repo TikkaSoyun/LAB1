@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {
+        packages: ['wordtree']
+      });
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable(
+          [
+            ['фрази'],
+['Цикл це сукупність окремих видів робіт'],
+['Цикл включає в себе вирішення питання про розроблення програмного забезпечення'],
+['Цикл включає в себе загальну організацію'],
+['Цикл включає в себе основні фази організації'],
+['Цикл включає в себе принципу переходу між фазами'],
+['Цикл включає в себе припинення використання програмного забезпечення'],
+['Цикл визначається моделлю'],
+['Цикл визначається формою методології'],
+['Цикл відноситься до дисципліни програмна інженерія'],
+['Цикл супроводжується розробленням програмної документації'],
+['Цикл супроводжується обігом програмної документації'],
+['Цикл супроводжується використанням програмної документації'],
+['Цикл представлений в виді каскадної моделі'],
+['Цикл представлений в виді спіральної моделі']
+          ]);
+        var options = {
+          wordtree: {
+            format: 'implicit',
+            word: 'Цикл'
+          }
+        };
+        var chart = new google.visualization.WordTree(document.getElementById('wordtree_basic'));
+              chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="wordtree_basic" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
